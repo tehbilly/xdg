@@ -69,14 +69,6 @@ func init() {
 	}
 }
 
-func homeFromEnv() {
-	if ev := os.Getenv("HOME"); ev == "" {
-		userHome = "~"
-	} else {
-		userHome = ev
-	}
-}
-
 // ConfigHome returns either the directory specified by the XDG_CONFIG_HOME
 // environment variable, or ~/.config
 func ConfigHome() string {
